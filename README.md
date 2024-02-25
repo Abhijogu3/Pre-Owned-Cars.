@@ -4,8 +4,11 @@ SELECT * FROM cars.car_dekho;
 Use Cars;
 -- Read Data--
 Select * from car_dekho;
+
 -- Total Cars: To get a count of total Recods--
+
 Select count(*) From Car_dekho;
+
 -- The manager asked employee how Many cars will be available in 2023? ---
 Select count(*) From Car_dekho 
 Where year = 2023;
@@ -32,6 +35,7 @@ Select count(*)  From Car_dekho
 Where year = 2020 and fuel =  "Petrol";
 
 -- The manager told the employee to give a print All the fuel cars (petrol, diesel, and CNG) come by all year. --
+
 Select year, Count(*) from car_dekho where fuel = "petrol" group by year;
 Select year, Count(*) from car_dekho where fuel = "Diesel" group by year;
 Select year, Count(*) from car_dekho where fuel = "CNG" group by Year;
